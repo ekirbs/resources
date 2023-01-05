@@ -4,6 +4,8 @@
 
 // DEPENDENCIES
 const express = require("express");
+// Import and require mysql2
+const mysql = require('mysql2');
 const htmlRoutes = require("./routes/htmlRoutes");
 
 const app = express();
@@ -15,10 +17,33 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/", htmlRoutes);
 
-
+// CUSTOM MIDDLEWARE
 app.use((req, res, next) => {
   console.log(`${req.method} request received for endpoint ${req.url}.`);
   next();
+});
+
+// Connect to database
+const db = mysql.createConnection(
+  {
+    host: 'localhost',
+    // MySQL username,
+    user: 'root',
+    // TODO: Add MySQL password
+    password: 'root',
+    database: 'family_db'
+  },
+  console.log(`Connected to the family_db database.`)
+);
+
+// Query database
+db.query('SELECT * FROM immediateFam', (err, results) => {
+  console.log(results);
+});
+
+// Default response for any other request (Not Found)
+app.use((req, res) => {
+  res.status(404).end();
 });
 
 // LISTENER
