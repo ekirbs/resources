@@ -34,7 +34,7 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
     ![alt text](assets/images/screenshot.png)
     ```
 
-![Tutorial GIF.](./assets/images/tutor-gif.gif)
+![Tutorial GIF.](./public/assets/images/tutor-gif.gif)
 
 ## Credits
 
