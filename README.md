@@ -36,6 +36,8 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 ![Tutorial GIF.](./public/assets/images/tutor-gif.gif)
 
+[![Tutorial](./assets/images/sql-tutor-img.png)](https://dropTutorialVideoHereInGihub.com/0000000.mp4))
+
 ## Credits
 
 List your collaborators, if any, with links to their GitHub profiles.
@@ -43,6 +45,8 @@ List your collaborators, if any, with links to their GitHub profiles.
 If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
 
 If you followed tutorials, include links to those here as well.
+
+Link: [Web Dev Simplified](https://www.youtube.com/@WebDevSimplified 'The Youtube channel for Web Dev Simplified.')
 
 ## License
 

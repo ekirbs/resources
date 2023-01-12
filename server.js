@@ -7,6 +7,8 @@ const express = require("express");
 // Import and require mysql2
 const mysql = require('mysql2');
 const htmlRoutes = require("./routes/htmlRoutes");
+const sequelize = require("sequelize");
+const inquirer = require("inquirer"); // @8.2.4
 
 const app = express();
 const PORT = process.env.PORT || 3001;
